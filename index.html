@@ -1,20 +1,65 @@
-﻿<!DOCTYPE html>
+﻿<!-- Este es el código actualizado para tu página web. -->
+<!-- Usamos Tailwind CSS para los estilos, cargado desde un CDN. -->
+<!-- La fuente 'Inter' se usa para un diseño limpio. -->
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Mi Primera Web!</title>
+    <title>¡Mi Primera Web con Estilo!</title>
+    <!-- Carga de Tailwind CSS para un diseño moderno y responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
-            padding-top: 50px;
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body>
-    <h1>¡Hola, Mundo!</h1>
-    <p>¡Mi sitio web está funcionando!</p>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <!-- Contenedor principal de la tarjeta con sombra y esquinas redondeadas -->
+    <div class="bg-white p-8 rounded-2xl shadow-xl max-w-lg w-full text-center">
+        <!-- Título principal de la página -->
+        <h1 class="text-4xl font-bold text-gray-800 mb-2">¡Hola desde tu web!</h1>
+
+        <!-- Subtítulo o descripción -->
+        <p class="text-gray-600 mb-6">Esta es tu primera página web con más elementos.</p>
+
+        <!-- Imagen de ejemplo para ilustrar el contenido -->
+        <img
+            src="https://placehold.co/600x400/94A3B8/FFFFFF?text=Tu+Imagen+Aqui"
+            alt="Ilustración de un paisaje genérico"
+            class="rounded-xl w-full mb-6 shadow-md"
+            onerror="this.src='https://placehold.co/600x400/94A3B8/FFFFFF?text=Imagen+no+disponible'"
+        >
+
+        <!-- Lista de elementos de ejemplo -->
+        <ul class="list-none text-left space-y-2 text-gray-700 mb-6">
+            <li class="flex items-center">
+                <!-- Icono de un cohete como elemento visual -->
+                <span class="mr-2 text-lg">🚀</span>
+                <span>¡Tu sitio web está publicado!</span>
+            </li>
+            <li class="flex items-center">
+                <!-- Icono de una estrella para destacar -->
+                <span class="mr-2 text-lg">✨</span>
+                <span>Puedes empezar a añadir más contenido.</span>
+            </li>
+            <li class="flex items-center">
+                <!-- Icono de un lápiz para sugerir ediciones -->
+                <span class="mr-2 text-lg">📝</span>
+                <span>¡Pruébalo! Puedes editar este archivo cuando quieras.</span>
+            </li>
+        </ul>
+
+        <!-- Botón de llamada a la acción -->
+        <button class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+            ¡Haz clic aquí!
+        </button>
+    </div>
+
 </body>
 </html>
