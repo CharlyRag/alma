@@ -1,65 +1,132 @@
-﻿<!-- Este es el código actualizado para tu página web. -->
-<!-- Usamos Tailwind CSS para los estilos, cargado desde un CDN. -->
-<!-- La fuente 'Inter' se usa para un diseño limpio. -->
+﻿<!--
+Este es el código completo para un micrositio.
+Incluye una estructura básica con un encabezado, una sección principal,
+una sección de características y un pie de página.
+Todo está estilizado con Tailwind CSS para ser completamente responsivo.
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Mi Primera Web con Estilo!</title>
+    <title>Micrositio Profesional</title>
     <!-- Carga de Tailwind CSS para un diseño moderno y responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+<body class="bg-gray-50 text-gray-800">
 
-    <!-- Contenedor principal de la tarjeta con sombra y esquinas redondeadas -->
-    <div class="bg-white p-8 rounded-2xl shadow-xl max-w-lg w-full text-center">
-        <!-- Título principal de la página -->
-        <h1 class="text-4xl font-bold text-gray-800 mb-2">¡Hola desde tu web!</h1>
+    <!-- Barra de Navegación (Header) -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">
+                Tu Marca
+            </a>
+            <div class="hidden md:flex space-x-6 font-medium">
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Inicio</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Características</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Contacto</a>
+            </div>
+            <!-- Botón de menú para dispositivos móviles (oculto en escritorio) -->
+            <button class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+    </header>
 
-        <!-- Subtítulo o descripción -->
-        <p class="text-gray-600 mb-6">Esta es tu primera página web con más elementos.</p>
+    <!-- Sección Principal (Hero) -->
+    <main class="container mx-auto px-4 py-16 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                Bienvenidos a tu <span class="text-blue-600">Micrositio</span>
+            </h1>
+            <p class="text-lg text-gray-600 mb-8">
+                Aquí puedes describir brevemente tu producto, servicio o idea.
+                ¡Es el lugar perfecto para captar la atención de tus visitantes!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-colors">
+                    Empezar ahora
+                </a>
+                <a href="#" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full border border-blue-600 hover:bg-gray-100 transition-colors">
+                    Aprender más
+                </a>
+            </div>
+        </div>
+    </main>
 
-        <!-- Imagen de ejemplo para ilustrar el contenido -->
-        <img
-            src="https://placehold.co/600x400/94A3B8/FFFFFF?text=Tu+Imagen+Aqui"
-            alt="Ilustración de un paisaje genérico"
-            class="rounded-xl w-full mb-6 shadow-md"
-            onerror="this.src='https://placehold.co/600x400/94A3B8/FFFFFF?text=Imagen+no+disponible'"
-        >
+    <!-- Sección de Características -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Características Destacadas
+            </h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+                Estas son algunas de las ventajas de tu producto o servicio.
+            </p>
 
-        <!-- Lista de elementos de ejemplo -->
-        <ul class="list-none text-left space-y-2 text-gray-700 mb-6">
-            <li class="flex items-center">
-                <!-- Icono de un cohete como elemento visual -->
-                <span class="mr-2 text-lg">🚀</span>
-                <span>¡Tu sitio web está publicado!</span>
-            </li>
-            <li class="flex items-center">
-                <!-- Icono de una estrella para destacar -->
-                <span class="mr-2 text-lg">✨</span>
-                <span>Puedes empezar a añadir más contenido.</span>
-            </li>
-            <li class="flex items-center">
-                <!-- Icono de un lápiz para sugerir ediciones -->
-                <span class="mr-2 text-lg">📝</span>
-                <span>¡Pruébalo! Puedes editar este archivo cuando quieras.</span>
-            </li>
-        </ul>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta de Característica 1 -->
+                <div class="p-8 bg-white rounded-xl shadow-md transform transition-transform hover:scale-105">
+                    <div class="flex justify-center mb-4">
+                        <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Rápido y Eficiente</h3>
+                    <p class="text-gray-600">
+                        Optimizado para un rendimiento excepcional, ofreciendo la mejor experiencia.
+                    </p>
+                </div>
+                <!-- Tarjeta de Característica 2 -->
+                <div class="p-8 bg-white rounded-xl shadow-md transform transition-transform hover:scale-105">
+                    <div class="flex justify-center mb-4">
+                        <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.018A9.955 9.955 0 0112 2c-2.978 0-5.772 1.168-7.828 3.222-4.045 4.045-4.045 10.59 0 14.635l2.42 2.42A10 10 0 0012 22a10 10 0 007.828-3.222l2.42-2.42c4.045-4.045 4.045-10.59 0-14.635z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Diseño Moderno</h3>
+                    <p class="text-gray-600">
+                        Una interfaz de usuario limpia e intuitiva, fácil de usar para todos.
+                    </p>
+                </div>
+                <!-- Tarjeta de Característica 3 -->
+                <div class="p-8 bg-white rounded-xl shadow-md transform transition-transform hover:scale-105">
+                    <div class="flex justify-center mb-4">
+                        <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.462 9.497 5 8 5c-3.314 0-6 2.686-6 6s2.686 6 6 6c1.497 0 2.832-.462 4-1.253m0-13C13.168 5.462 14.503 5 16 5c3.314 0 6 2.686 6 6s-2.686 6-6 6c-1.497 0-2.832-.462-4-1.253" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Personalizable</h3>
+                    <p class="text-gray-600">
+                        Adapta cada elemento a tus necesidades y hazlo único para tu marca.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Botón de llamada a la acción -->
-        <button class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
-            ¡Haz clic aquí!
-        </button>
-    </div>
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Tu Marca. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
