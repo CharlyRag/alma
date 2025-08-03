@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Alma Inteligente</title>
+    <!-- Incluimos Tailwind CSS para un diseño moderno y responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Usamos la fuente Inter para una tipografía limpia -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <!-- Contenedor principal del formulario, centrado y con sombra -->
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-lg">
+        <h1 class="text-3xl font-bold text-gray-800 text-center mb-2">Contáctanos</h1>
+        <p class="text-gray-600 text-center mb-6">
+            Queremos saber de ti. Por favor, completa el formulario y nos pondremos en contacto.
+        </p>
+
+        <!-- El formulario en sí -->
+        <form action="#" method="POST" class="space-y-4">
+            
+            <!-- Campo para el nombre -->
+            <div>
+                <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required
+                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+
+            <!-- Campo para el email -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tu.correo@ejemplo.com" required
+                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+
+            <!-- Campo para el mensaje -->
+            <div>
+                <label for="mensaje" class="block text-sm font-medium text-gray-700">Tu mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required
+                          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+            </div>
+            
+            <!-- Botón de envío -->
+            <div class="pt-4">
+                <button type="submit"
+                        class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out">
+                    Enviar Mensaje
+                </button>
+            </div>
+            
+            <!-- Nota importante: Este formulario es solo una maqueta. La funcionalidad de envío necesitaría un backend. -->
+        </form>
+    </div>
+
+</body>
+</html>
